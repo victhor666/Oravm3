@@ -14,3 +14,4 @@ block_storage_size_in_gbs=20
 VOL-ORACLE-SIZE=25
 VOL-DATA-SIZE=10
 ebs_volume_type="gp2"
+Profile="default"
