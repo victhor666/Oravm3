@@ -1,5 +1,5 @@
 ############################
-SERVIDOR ORACLE EN AWS    #
+#SERVIDOR ORACLE EN AWS    #
 ############################
 provider "aws" {
   profile    = "${var.Profile}"
@@ -8,6 +8,4 @@ provider "aws" {
 
  module "aws" {
  source = "../modulos/aws"
- Proyecto=var.Proyecto
- Location=var.Location
  }
