@@ -50,9 +50,9 @@ variable "Location" {
      }
 
 # # VNIC INFO
-#         variable "private_ip" {
-#         default = "192.168.10.51"
-#       }
+         variable "private_ip" {
+         default = "192.168.10.51"
+       }
       
 # BOOT INFO      
   # user data

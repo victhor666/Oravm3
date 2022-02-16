@@ -133,7 +133,7 @@ resource "aws_security_group" "Oracle-SG" {
 
 resource "aws_key_pair" "Oracle-KEY" {
   key_name   = "${var.Proyecto}-KEY"
-  public_key = "${file("~/Oravm2/orauser.pub")}"
+  public_key = "${file("~/Oravm3/orauser.pub")}"
   }
 resource "aws_instance" "Oracle-VM" {
 #   name                = "${var.Proyecto}-VM"
