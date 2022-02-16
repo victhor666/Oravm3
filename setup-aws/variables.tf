@@ -5,10 +5,10 @@
 # Aws account region and autehntication 
 #variable "aws_access_key" {}
 #variable "aws_secret_key" {}
-variable "Proyecto" {
-    description= "Nombre del proyecto. Será el prefijo de los nombres de los objetos que se creen y de las tags. Ejemplo: Oracle, Oratest,Oracle-test"
-    type=string
-}
+# variable "Proyecto" {
+#     description= "Nombre del proyecto. Será el prefijo de los nombres de los objetos que se creen y de las tags. Ejemplo: Oracle, Oratest,Oracle-test"
+#     type=string
+# }
 
 variable "Location" {
     description="region donde desplegar la infra. Aqui se desplegará todo, red, máquinas discos..."
@@ -20,16 +20,16 @@ variable "Profile" {
 }
 
 
-# ##############################
-# #####VARIABLES NETWORK
-# ##############################
-# # VPC 
+# # ##############################
+# # #####VARIABLES NETWORK
+# # ##############################
+# # # VPC 
     
 #     variable "vpc_cidr" {
 #       type=string
 #     }
 
-# # SUBNET 
+# # # SUBNET 
 
 #     variable "subnet_cidr"{
 #       type=string
@@ -37,9 +37,9 @@ variable "Profile" {
 #     variable "map_public_ip_on_launch" { 
 #       description = "Se le asigna una ip publica al desplegar o no. "
 #     }  
-# ##############################
-# #####VARIABLES SERVER
-# ##############################
+# # ##############################
+# # #####VARIABLES SERVER
+# # ##############################
 
 #       variable "preserve_boot_volume" {
 #         default = false
@@ -55,12 +55,12 @@ variable "Profile" {
 #         default   = "ami-0484afc52074f4f84"
 #      }
 
-# # # VNIC INFO
+# # # # VNIC INFO
 # #         variable "private_ip" {
 # #         default = "192.168.10.51"
 # #       }
       
-# # BOOT INFO      
+# # # BOOT INFO      
 #   # user data
 #       variable "user_data_aws" {
 #         default = "~/Oravm3/modulos/aws/user_data_aws.txt"
