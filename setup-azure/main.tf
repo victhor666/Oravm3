@@ -21,5 +21,6 @@ module "azure" {
   servername                = var.servername   
   DATABASENAME              = var.DATABASENAME 
   os_publisher              = var.os_publisher 
-  OS                        = var.OS           
+  OS                        = var.OS   
+  user_data                 = var.user_data       
 }

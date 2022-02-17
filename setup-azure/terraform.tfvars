@@ -19,3 +19,4 @@ os_publisher= {
     }
   }
 OS = "OL7"
+user_data="~/Oravm3/setup-azure/user_data_azure.txt"
