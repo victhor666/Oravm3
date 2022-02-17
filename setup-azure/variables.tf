@@ -1,15 +1,12 @@
 # Azure account region and authentication
 variable "Proyecto" {
-  default     = "Oracle"
   description = "Prefijo para todo"
 }
 
 variable "az_location" {
-  default = "eastus"
 }
 # INFO VPC
 variable "vnet_name" {
-  default = "OracleVnet"
 }
 
 variable "vnet_cidr" {
