@@ -55,10 +55,9 @@ variable "OS" {
 
 }
 
-# VNIC INFO
-variable "private_ip" {
-
-}
+## VNIC INFO
+#variable "private_ip" {
+#}
 
 # BOOT INFO
 # user data
