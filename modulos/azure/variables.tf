@@ -1,5 +1,5 @@
 # Azure account region and authentication
-variable "prefix" {
+variable "Proyecto" {
   default     = "Ora"
   description = "Prefijo para todo"
 }
