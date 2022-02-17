@@ -48,28 +48,22 @@ variable "DATABASENAME" {
 }
 
 variable "os_publisher" {
-  default = {
-    OL7 = {
-      publisher = "Oracle"
-      offer     = "Oracle-Linux"
-      sku       = "79-gen2"
-    }
-  }
+
 }
 variable "OS" {
   description = "El sistema operativo elegido es"
-  default     = "OL7"
+
 }
 
 # VNIC INFO
 variable "private_ip" {
-  default = "192.168.10.51"
+
 }
 
 # BOOT INFO
 # user data
 variable "user_data" {
-  default = "./userdata.txt"
+
 }
 
 # EBS
