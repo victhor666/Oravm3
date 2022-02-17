@@ -10,7 +10,7 @@ resource "azurerm_resource_group" "Rg" {
 # VNET
 #################
 resource "azurerm_virtual_network" "Oracle_Vnet" {
-  name                = "${var.prefix}-network"
+  name                = "${var.Proyecto}-network"
   resource_group_name = azurerm_resource_group.Rg.name
   location            = azurerm_resource_group.Rg.location
   address_space       = [var.vnet_cidr]
@@ -23,7 +23,7 @@ resource "azurerm_subnet" "Oracle_Subnet" {
   name                 = "internal"
   virtual_network_name = azurerm_virtual_network.Oracle_Vnet.name
   resource_group_name  = azurerm_resource_group.Rg.name
-  address_prefixes     = [var.subnet_cidr]
+  address_Proyectoes     = [var.subnet_cidr]
 }
 
 ######################
@@ -31,7 +31,7 @@ resource "azurerm_subnet" "Oracle_Subnet" {
 ######################
 
 resource "azurerm_network_security_group" "Oracle_Nsg" {
-  name                = "${var.prefix}-Nsg"
+  name                = "${var.Proyecto}-Nsg"
   location            = azurerm_resource_group.Rg.location
   resource_group_name = azurerm_resource_group.Rg.name
 
@@ -43,8 +43,8 @@ resource "azurerm_network_security_group" "Oracle_Nsg" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_range     = "*"
-    source_address_prefix      = "*"
-    destination_address_prefix = "*"
+    source_address_Proyecto      = "*"
+    destination_address_Proyecto = "*"
     description                = "Salida a internet sin restricciones. Debe ser modificado mas adelante"
   }
   security_rule {
@@ -55,8 +55,8 @@ resource "azurerm_network_security_group" "Oracle_Nsg" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_ranges    = ["22", "80", "443"]
-    source_address_prefix      = "*"
-    destination_address_prefix = "*"
+    source_address_Proyecto      = "*"
+    destination_address_Proyecto = "*"
     description                = "SSH-HTTP-HTTPS entradas estandar de gestion"
   }
 
