@@ -23,7 +23,7 @@ resource "azurerm_subnet" "Oracle_Subnet" {
   name                 = "internal"
   virtual_network_name = azurerm_virtual_network.Oracle_Vnet.name
   resource_group_name  = azurerm_resource_group.Rg.name
-  address_Proyectoes     = [var.subnet_cidr]
+  address_prefixes     = [var.subnet_cidr]
 }
 
 ######################
@@ -43,8 +43,8 @@ resource "azurerm_network_security_group" "Oracle_Nsg" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_range     = "*"
-    source_address_Proyecto      = "*"
-    destination_address_Proyecto = "*"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
     description                = "Salida a internet sin restricciones. Debe ser modificado mas adelante"
   }
   security_rule {
@@ -55,8 +55,8 @@ resource "azurerm_network_security_group" "Oracle_Nsg" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_ranges    = ["22", "80", "443"]
-    source_address_Proyecto      = "*"
-    destination_address_Proyecto = "*"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
     description                = "SSH-HTTP-HTTPS entradas estandar de gestion"
   }
 
