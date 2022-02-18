@@ -22,7 +22,6 @@ ProjectID                             = var.ProjectID
 Location                              = var.Location
 auto_create_subnetworks               = var.auto_create_subnetworks
 routing_mode                          = var.routing_mode
-auto_create_subnetworks               = var.auto_create_subnetworks
 delete_default_internet_gateway_routes= var.delete_default_internet_gateway_routes
 }
 
