@@ -1,3 +1,4 @@
+Prefijo                               ="ora"
 ProjectID                             ="terraform-oracle-341708"
 Location                              ="us-west1"
 auto_create_subnetworks               =false
