@@ -5,14 +5,14 @@
 
 resource "google_compute_network" "vpc_network" {
   project                         = var.ProjectID
-  name                            = "${var.Prefijo}VPC"
+  name                            = "${var.Prefijo}-vpc"
   routing_mode                    = var.routing_mode
   auto_create_subnetworks         = var.auto_create_subnetworks
   description                     = "Red general de despliegue para proyect ${var.ProjectID}"
   delete_default_routes_on_create = var.delete_default_internet_gateway_routes
 }
 resource "google_compute_subnetwork" "subnet" {
-  name          = "${var.Prefijo}SUBNET"
+  name          = "${var.Prefijo}-subnet"
   ip_cidr_range = "10.2.0.0/24"
   region        = "us-central1"
   network       = google_compute_network.vpc_network.id
