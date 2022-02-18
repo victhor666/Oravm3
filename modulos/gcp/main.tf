@@ -12,7 +12,7 @@ resource "google_compute_network" "vpc_network" {
   delete_default_routes_on_create = var.delete_default_internet_gateway_routes
 }
 resource "google_compute_subnetwork" "subnet" {
-  name          = "${var.ProjectID}-SUBNET"
+  name          = "subred1"
   ip_cidr_range = "10.2.0.0/24"
   region        = "us-central1"
   network       = google_compute_network.vpc_network.id
