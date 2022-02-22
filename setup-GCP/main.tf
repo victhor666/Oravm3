@@ -9,8 +9,9 @@ terraform {
 
 provider "google" {
   project = var.ProjectID
-  region  = var.Location
-  zone    = "${var.Location}-c"
+  credentials = var.gcp_credentials
+  region      = var.Location
+  zone        = "${var.Location}-c"
 }
 
 ############################
